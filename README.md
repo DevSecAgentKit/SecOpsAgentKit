@@ -13,19 +13,19 @@ SecOpsAgentKit provides specialized Claude Code skills for security operations, 
 
 ## Quick Start
 
-### Using a Skill
-
-Skills are automatically discovered by Claude Code when placed in the skills directory. Browse available skills by category:
-
-```bash
-skills/
-├── appsec/              # Application Security
-├── devsecops/           # DevSecOps & CI/CD Security
-├── secsdlc/             # Secure SDLC
-├── threatmodel/         # Threat Modeling
-├── compliance/          # Compliance & Auditing
-└── incident-response/   # Incident Response
-```
+<!-- ### Using a Skill -->
+<!---->
+<!-- Skills are automatically discovered by Claude Code when placed in the skills directory. Browse available skills by category: -->
+<!---->
+<!-- ```bash -->
+<!-- skills/ -->
+<!-- ├── appsec/              # Application Security -->
+<!-- ├── devsecops/           # DevSecOps & CI/CD Security -->
+<!-- ├── secsdlc/             # Secure SDLC -->
+<!-- ├── threatmodel/         # Threat Modeling -->
+<!-- ├── compliance/          # Compliance & Auditing -->
+<!-- └── incident-response/   # Incident Response -->
+<!-- ``` -->
 
 ### Contributing a New Skill
 

@@ -1,0 +1,53 @@
+{
+  "name": "sec-ops-agent-kit-skills",
+  "owner": {
+    "name": "Sir AppSec",
+    "email": "sirappsec@gmail.com"
+  },
+  "metadata": {
+    "description": "Security operations and DevSecOps toolbox for AI coding agents",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "appsec-skills",
+      "description": "Application security skills for SAST, DAST, code review, and vulnerability detection",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./appsec/sast-semgrep",
+        "./appsec/sast-bandit",
+        "./appsec/dast-zap"
+      ]
+    },
+    {
+      "name": "devsecops-skills",
+      "description": "DevSecOps and CI/CD security automation skills for secrets detection, IaC scanning, and pipeline security",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./devsecops/secrets-gitleaks",
+        "./devsecops/iac-checkov",
+        "./devsecops/container-hadolint"
+      ]
+    },
+    {
+      "name": "secsdlc-skills",
+      "description": "Secure Software Development Lifecycle skills for code review automation, security feedback, and development workflow integration",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./secsdlc/reviewdog"
+      ]
+    },
+    {
+      "name": "compliance-skills",
+      "description": "Compliance and policy-as-code skills for SOC2, PCI-DSS, GDPR, HIPAA validation using OPA and policy enforcement",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./compliance/policy-opa"
+      ]
+    }
+  ]
+}
