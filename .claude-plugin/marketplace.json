@@ -17,7 +17,8 @@
       "skills": [
         "./appsec/sast-semgrep",
         "./appsec/sast-bandit",
-        "./appsec/dast-zap"
+        "./appsec/dast-zap",
+        "./appsec/dast-nuclei"
       ]
     },
     {
