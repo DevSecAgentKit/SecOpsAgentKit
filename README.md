@@ -128,4 +128,15 @@ frameworks: [OWASP, CWE]        # Security frameworks referenced
 
 ## License
 
-[Add your license here]
+This project uses dual licensing:
+
+- **Documentation** (markdown files): [Creative Commons Attribution-ShareAlike 4.0 International (CC-BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
+- **Code** (scripts, configurations): Dual-licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) and [Mozilla Public License 2.0 (MPL 2.0)](https://www.mozilla.org/en-US/MPL/2.0/)
+
+This means:
+- You can freely use, share, and adapt all content with attribution
+- Documentation must be shared under the same CC-BY-SA 4.0 license
+- Code can be used under either CC-BY-SA 4.0 or MPL 2.0 (your choice)
+- MPL 2.0 allows combining with proprietary code while keeping modified MPL files open
+
+See [LICENSE.md](LICENSE.md) for full license texts and details.

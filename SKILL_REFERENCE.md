@@ -195,6 +195,159 @@ chmod +x skills/<category>/<skill-name>/scripts/script.py
 ./skills/<category>/<skill-name>/scripts/script.py --help
 ```
 
+## Progressive Disclosure Quick Reference
+
+**Goal**: Keep SKILL.md under 500 lines by moving detailed content to `references/`
+
+### When to Split Content
+
+**Keep in SKILL.md**:
+- Core workflows (top 3-5 use cases)
+- Decision points and conditional logic
+- Quick start guidance
+- Essential security considerations
+
+**Move to references/**:
+- Content exceeding 100 lines
+- Framework-specific details (OWASP/CWE mappings)
+- Advanced user content only
+- Lookup-oriented content (rule libraries)
+
+### Three Patterns
+
+1. **High-Level + References**: Core workflows in SKILL.md, details in references
+2. **Domain-Specific**: Separate reference files per domain/language
+3. **Conditional Details**: Basic content inline, advanced topics linked
+
+### Key Rules
+
+- ✅ Keep references **one level deep** from SKILL.md
+- ✅ Add table of contents for references >100 lines
+- ❌ No nested references (SKILL.md → ref → sub-ref)
+- ❌ Don't explain what Claude already knows
+
+## Workflow Patterns
+
+### Workflow Checklist Template
+
+```markdown
+## Workflow Name
+
+Progress:
+[ ] 1. First step description
+[ ] 2. Second step description
+[ ] 3. Third step description
+[ ] 4. Fourth step description
+
+Work through each step systematically. Check off completed items.
+```
+
+**Use for**: Complex multi-step operations where progress tracking helps
+
+### Conditional Workflow Template
+
+```markdown
+## Workflow Name
+
+1. Analyze situation
+   - If condition A → Action A / See reference-a.md
+   - If condition B → Action B / See reference-b.md
+   - If condition C → Action C / See reference-c.md
+
+2. Apply appropriate pattern
+3. Validate results
+```
+
+**Use for**: Decision-based workflows with branching logic
+
+### Iterative Workflow Template
+
+```markdown
+## Workflow Name
+
+For each item in scope:
+1. Perform operation
+2. Check result
+3. Document finding
+
+Continue until all items processed.
+```
+
+**Use for**: Operations repeated across multiple targets
+
+## Degrees of Freedom
+
+Match instruction strictness to operation fragility:
+
+| Level | Type | When to Use | Example |
+|-------|------|-------------|---------|
+| **High** | Text instructions | Multiple valid approaches | "Analyze codebase for security anti-patterns" |
+| **Medium** | Pseudocode + params | Preferred pattern with variation | "Run semgrep --config=auto, prioritize by severity" |
+| **Low** | Specific scripts | Fragile operations needing consistency | "Run: ./scripts/validate.py config.json" |
+
+**Tip**: Use scripts for low-freedom operations to ensure reliability
+
+## Anti-Patterns
+
+### Content Anti-Patterns
+
+| ❌ Don't | ✅ Do |
+|----------|-------|
+| Explain what Claude knows | Only include security-specific knowledge |
+| Include dates (e.g., "As of 2024...") | Use timeless language ("current standards") |
+| Use Windows paths (scripts\file.py) | Use forward slashes (scripts/file.py) |
+| Verbose explanations | Concise, imperative instructions |
+
+### Structural Anti-Patterns
+
+| ❌ Don't | ✅ Do |
+|----------|-------|
+| Nested references (SKILL → ref → sub-ref) | One level from SKILL.md |
+| Create README.md, CHANGELOG.md | Only SKILL.md for docs |
+| Exceed 500 lines in SKILL.md | Split to references/ |
+| Offer 8+ options | Provide default + escape hatch |
+
+### Workflow Anti-Patterns
+
+| ❌ Don't | ✅ Do |
+|----------|-------|
+| "Analyze the code" (vague) | "Run semgrep --config=auto . --json" (specific) |
+| "Parse JSON and extract CVEs" | "Run: ./scripts/extract_cves.py results.json" |
+| Offer too many scan types | Provide default scan + link to advanced options |
+
+## Testing & Evaluation
+
+### Evaluation-First Process
+
+1. Identify skill requirements
+2. Create 3-5 realistic test scenarios
+3. Establish baseline performance
+4. Write minimal instructions to pass tests
+5. Iterate based on observed behavior
+
+### Good Test Scenarios
+
+- **Realistic**: Based on actual security operations
+- **Specific**: Clear inputs and expected outputs
+- **Measurable**: Objective success criteria
+- **Diverse**: Cover common patterns and edge cases
+
+### Testing Checklist
+
+- [ ] Test on 3-5 realistic security scenarios
+- [ ] All scripts execute without errors
+- [ ] References load correctly
+- [ ] No placeholder text (TODO, FIXME)
+- [ ] Workflows complete end-to-end
+- [ ] Error conditions handled gracefully
+- [ ] Validation script passes
+
+### Claude A/B Development
+
+- **Claude A (Expert)**: Review and refine skill documentation
+- **Claude B (Agent)**: Use skill to perform actual work
+- Iterate: Observe B's behavior → Return to A for improvements
+
 ## Resources
 
 - [CONTRIBUTE.md](CONTRIBUTE.md) - Full contribution guidelines
