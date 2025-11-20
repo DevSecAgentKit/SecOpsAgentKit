@@ -48,6 +48,15 @@
       "skills": [
         "./compliance/policy-opa"
       ]
+    },
+    {
+      "name": "incident-response-skills",
+      "description": "Security incident response and detection engineering skills for Sigma rules, SIEM integration, and threat hunting",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./incident-response/detection-sigma"
+      ]
     }
   ]
 }
