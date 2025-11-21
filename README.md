@@ -21,42 +21,43 @@ SecOpsAgentKit provides specialized Claude Code skills for security operations, 
 
 ### Application Security (appsec/)
 
-- **[sast-semgrep](skills/appsec/sast-semgrep/SKILL.md)** - Static application security testing using Semgrep for vulnerability detection | [Tool](https://semgrep.dev/docs/)
-- **[sast-bandit](skills/appsec/sast-bandit/SKILL.md)** - Python security vulnerability detection using Bandit SAST with CWE and OWASP mappings | [Tool](https://github.com/PyCQA/bandit)
-- **[dast-zap](skills/appsec/dast-zap/SKILL.md)** - Dynamic application security testing using OWASP ZAP (Zed Attack Proxy) | [Tool](https://www.zaproxy.org/docs/)
-- **[dast-nuclei](skills/appsec/dast-nuclei/SKILL.md)** - Fast, template-based vulnerability scanning using ProjectDiscovery's Nuclei | [Tool](https://docs.projectdiscovery.io/tools/nuclei/overview)
-- **[api-mitmproxy](skills/appsec/api-mitmproxy/SKILL.md)** - Interactive HTTPS proxy for API security testing with traffic interception and modification | [Tool](https://mitmproxy.org/)
-- **[dast-ffuf](skills/appsec/dast-ffuf/SKILL.md)** - Fast web fuzzer for directory enumeration and parameter fuzzing | [Tool](https://github.com/ffuf/ffuf)
+- **[api-mitmproxy](skills/appsec/api-mitmproxy/SKILL.md)** - Interactive HTTPS proxy for API security testing with [mitmproxy](https://mitmproxy.org/) traffic interception and modification
+- **[dast-ffuf](skills/appsec/dast-ffuf/SKILL.md)** - Fast web fuzzer using [ffuf](https://github.com/ffuf/ffuf) for directory enumeration and parameter fuzzing
+- **[dast-nuclei](skills/appsec/dast-nuclei/SKILL.md)** - Fast, template-based vulnerability scanning using ProjectDiscovery's [Nuclei](https://docs.projectdiscovery.io/tools/nuclei/overview)
+- **[dast-zap](skills/appsec/dast-zap/SKILL.md)** - Dynamic application security testing using [OWASP ZAP](https://www.zaproxy.org/docs/) (Zed Attack Proxy)
+- **[sast-bandit](skills/appsec/sast-bandit/SKILL.md)** - Python security vulnerability detection using [Bandit](https://github.com/PyCQA/bandit) SAST with CWE and OWASP mappings
+- **[sast-semgrep](skills/appsec/sast-semgrep/SKILL.md)** - Static application security testing using [Semgrep](https://semgrep.dev/docs/) for vulnerability detection
+- **[sca-blackduck](skills/appsec/sca-blackduck/SKILL.md)** - Software Composition Analysis using Synopsys [Black Duck](https://sig-product-docs.synopsys.com/bundle/bd-hub/page/Welcome.html) for dependency vulnerabilities and license compliance
 
 ### DevSecOps (devsecops/)
 
-- **[secrets-gitleaks](skills/devsecops/secrets-gitleaks/SKILL.md)** - Hardcoded secret detection and prevention in git repositories using Gitleaks | [Tool](https://github.com/gitleaks/gitleaks)
-- **[iac-checkov](skills/devsecops/iac-checkov/SKILL.md)** - Infrastructure as Code security scanning using Checkov with 750+ built-in policies | [Tool](https://www.checkov.io/)
-- **[container-hadolint](skills/devsecops/container-hadolint/SKILL.md)** - Dockerfile security linting and best practice validation using Hadolint | [Tool](https://github.com/hadolint/hadolint)
+- **[secrets-gitleaks](skills/devsecops/secrets-gitleaks/SKILL.md)** - Hardcoded secret detection and prevention in git repositories using [Gitleaks](https://github.com/gitleaks/gitleaks)
+- **[iac-checkov](skills/devsecops/iac-checkov/SKILL.md)** - Infrastructure as Code security scanning using [Checkov](https://www.checkov.io/) with 750+ built-in policies
+- **[container-hadolint](skills/devsecops/container-hadolint/SKILL.md)** - Dockerfile security linting and best practice validation using [Hadolint](https://github.com/hadolint/hadolint)
 
 ### Secure SDLC (secsdlc/)
 
-- **[reviewdog](skills/secsdlc/reviewdog/SKILL.md)** - Automated code review and security linting integration for CI/CD pipelines | [Tool](https://github.com/reviewdog/reviewdog)
-- **[sast-horusec](skills/secsdlc/sast-horusec/SKILL.md)** - Multi-language static application security testing using Horusec (18+ languages, 20+ tools) | [Tool](https://github.com/ZupIT/horusec)
-- **[sbom-syft](skills/secsdlc/sbom-syft/SKILL.md)** - Software Bill of Materials (SBOM) generation using Syft for container images and filesystems | [Tool](https://github.com/anchore/syft)
+- **[reviewdog](skills/secsdlc/reviewdog/SKILL.md)** - Automated code review and security linting integration for CI/CD pipelines using [reviewdog](https://github.com/reviewdog/reviewdog)
+- **[sast-horusec](skills/secsdlc/sast-horusec/SKILL.md)** - Multi-language static application security testing using [Horusec](https://github.com/ZupIT/horusec) (18+ languages, 20+ tools)
+- **[sbom-syft](skills/secsdlc/sbom-syft/SKILL.md)** - Software Bill of Materials (SBOM) generation using [Syft](https://github.com/anchore/syft) for container images and filesystems
 
 ### Compliance (compliance/)
 
-- **[policy-opa](skills/compliance/policy-opa/SKILL.md)** - Policy-as-code enforcement and compliance validation using Open Policy Agent (OPA) | [Tool](https://www.openpolicyagent.org/docs/latest/)
+- **[policy-opa](skills/compliance/policy-opa/SKILL.md)** - Policy-as-code enforcement and compliance validation using [Open Policy Agent](https://www.openpolicyagent.org/docs/latest/) (OPA)
 
 ### Incident Response (incident-response/)
 
-- **[detection-sigma](skills/incident-response/detection-sigma/SKILL.md)** - Generic detection rule creation and management using Sigma (universal SIEM rule format) | [Tool](https://github.com/SigmaHQ/sigma)
+- **[detection-sigma](skills/incident-response/detection-sigma/SKILL.md)** - Generic detection rule creation and management using [Sigma](https://github.com/SigmaHQ/sigma) (universal SIEM rule format)
 
 ### Offensive Security (offsec/)
 
-- **[pentest-metasploit](skills/offsec/pentest-metasploit/SKILL.md)** - Penetration testing framework for exploit development and vulnerability validation | [Tool](https://docs.metasploit.com/)
-- **[recon-nmap](skills/offsec/recon-nmap/SKILL.md)** - Network reconnaissance and security auditing using Nmap for port scanning and service detection | [Tool](https://nmap.org/book/)
-- **[network-netcat](skills/offsec/network-netcat/SKILL.md)** - Network utility for reading/writing data across TCP/UDP connections and port scanning | [Tool](https://nmap.org/ncat/guide/index.html)
-- **[analysis-tshark](skills/offsec/analysis-tshark/SKILL.md)** - Network protocol analyzer and packet capture tool for traffic analysis | [Tool](https://www.wireshark.org/docs/man-pages/tshark.html)
-- **[webapp-sqlmap](skills/offsec/webapp-sqlmap/SKILL.md)** - Automated SQL injection detection and exploitation tool for web application security testing | [Tool](https://sqlmap.org/)
-- **[webapp-nikto](skills/offsec/webapp-nikto/SKILL.md)** - Web server vulnerability scanner for identifying security issues and misconfigurations | [Tool](https://cirt.net/Nikto2)
-- **[crack-hashcat](skills/offsec/crack-hashcat/SKILL.md)** - Advanced password recovery and hash cracking tool supporting multiple algorithms | [Tool](https://hashcat.net/wiki/)
+- **[pentest-metasploit](skills/offsec/pentest-metasploit/SKILL.md)** - Penetration testing framework using [Metasploit](https://docs.metasploit.com/) for exploit development and vulnerability validation
+- **[recon-nmap](skills/offsec/recon-nmap/SKILL.md)** - Network reconnaissance and security auditing using [Nmap](https://nmap.org/book/) for port scanning and service detection
+- **[network-netcat](skills/offsec/network-netcat/SKILL.md)** - Network utility using [Netcat](https://nmap.org/ncat/guide/index.html) for reading/writing data across TCP/UDP connections and port scanning
+- **[analysis-tshark](skills/offsec/analysis-tshark/SKILL.md)** - Network protocol analyzer and packet capture tool using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) for traffic analysis
+- **[webapp-sqlmap](skills/offsec/webapp-sqlmap/SKILL.md)** - Automated SQL injection detection and exploitation using [SQLMap](https://sqlmap.org/) for web application security testing
+- **[webapp-nikto](skills/offsec/webapp-nikto/SKILL.md)** - Web server vulnerability scanner using [Nikto](https://cirt.net/Nikto2) for identifying security issues and misconfigurations
+- **[crack-hashcat](skills/offsec/crack-hashcat/SKILL.md)** - Advanced password recovery and hash cracking using [Hashcat](https://hashcat.net/wiki/) supporting multiple algorithms
 
 
 ## Security Frameworks

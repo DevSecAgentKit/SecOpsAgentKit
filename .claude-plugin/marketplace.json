@@ -20,7 +20,8 @@
         "./appsec/dast-zap",
         "./appsec/dast-nuclei",
         "./appsec/api-mitmproxy",
-        "./appsec/dast-ffuf"
+        "./appsec/dast-ffuf",
+        "./appsec/sca-blackduck"
       ]
     },
     {

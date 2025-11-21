@@ -242,17 +242,18 @@ Before submitting, ensure:
 Add your skill to the README.md under the appropriate category section using this format:
 
 ```markdown
-- **[skill-name](skills/category/skill-name/SKILL.md)** - Brief description of what the tool does | [Tool](https://link-to-tool-repository-or-docs)
+- **[skill-name](skills/category/skill-name/SKILL.md)** - Brief description using [Tool Name](https://link-to-tool-docs) for what it does
 ```
 
 **Example:**
 ```markdown
-- **[sast-semgrep](skills/appsec/sast-semgrep/SKILL.md)** - Static application security testing using Semgrep for vulnerability detection | [Tool](https://semgrep.dev/docs/)
+- **[sast-semgrep](skills/appsec/sast-semgrep/SKILL.md)** - Static application security testing using [Semgrep](https://semgrep.dev/docs/) for vulnerability detection
 ```
 
 **Format requirements:**
 - Skill name links to the SKILL.md file in this repository
 - Brief description (one line, ~80-100 characters)
+- Tool name is linked inline within the description (not at the end)
 - Tool link points to the official tool repository or documentation (first URL in your SKILL.md frontmatter `references`)
 - Maintain alphabetical order within the category section
 - Ensure the entry matches your skill's `name` and primary `references[0]` from SKILL.md frontmatter
