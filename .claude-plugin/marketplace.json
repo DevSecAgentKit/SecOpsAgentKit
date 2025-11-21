@@ -18,7 +18,9 @@
         "./appsec/sast-semgrep",
         "./appsec/sast-bandit",
         "./appsec/dast-zap",
-        "./appsec/dast-nuclei"
+        "./appsec/dast-nuclei",
+        "./appsec/api-mitmproxy",
+        "./appsec/dast-ffuf"
       ]
     },
     {
@@ -38,7 +40,9 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./secsdlc/reviewdog"
+        "./secsdlc/reviewdog",
+        "./secsdlc/sast-horusec",
+        "./secsdlc/sbom-syft"
       ]
     },
     {
@@ -57,6 +61,21 @@
       "strict": false,
       "skills": [
         "./incident-response/detection-sigma"
+      ]
+    },
+    {
+      "name": "offsec-skills",
+      "description": "Offensive security skills for penetration testing, network reconnaissance, exploitation, and security assessments",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./offsec/pentest-metasploit",
+        "./offsec/recon-nmap",
+        "./offsec/network-netcat",
+        "./offsec/analysis-tshark",
+        "./offsec/webapp-sqlmap",
+        "./offsec/webapp-nikto",
+        "./offsec/crack-hashcat"
       ]
     }
   ]
