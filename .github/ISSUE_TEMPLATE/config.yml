@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Discussion Forum
+    url: https://github.com/DevSecAgentKit/SecOpsAgentKit/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: Documentation
+    url: https://github.com/DevSecAgentKit/SecOpsAgentKit/blob/main/CONTRIBUTE.md
+    about: Read the contribution guidelines and skill development documentation

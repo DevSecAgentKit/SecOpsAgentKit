@@ -234,12 +234,34 @@ Before submitting, ensure:
 - [ ] References are properly linked from SKILL.md
 - [ ] Security considerations are documented
 - [ ] No sensitive data or credentials included
+- [ ] **README.md has been updated** with your skill entry (see step 3.1 below)
+- [ ] **marketplace.json has been updated** with your skill path
+
+#### 3.1. Update README.md
+
+Add your skill to the README.md under the appropriate category section using this format:
+
+```markdown
+- **[skill-name](skills/category/skill-name/SKILL.md)** - Brief description of what the tool does | [Tool](https://link-to-tool-repository-or-docs)
+```
+
+**Example:**
+```markdown
+- **[sast-semgrep](skills/appsec/sast-semgrep/SKILL.md)** - Static application security testing using Semgrep for vulnerability detection | [Tool](https://semgrep.dev/docs/)
+```
+
+**Format requirements:**
+- Skill name links to the SKILL.md file in this repository
+- Brief description (one line, ~80-100 characters)
+- Tool link points to the official tool repository or documentation (first URL in your SKILL.md frontmatter `references`)
+- Maintain alphabetical order within the category section
+- Ensure the entry matches your skill's `name` and primary `references[0]` from SKILL.md frontmatter
 
 ### 4. Submit Pull Request
 
 ```bash
 git checkout -b skill/my-skill-name
-git add skills/appsec/my-skill-name
+git add skills/appsec/my-skill-name README.md .claude-plugin/marketplace.json
 git commit -m "Add my-skill-name skill for [brief description]"
 git push origin skill/my-skill-name
 ```
