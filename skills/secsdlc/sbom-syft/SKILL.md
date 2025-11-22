@@ -9,7 +9,7 @@ description: >
   dependencies, (4) Integrating SBOM generation into CI/CD for supply chain security, (5) Creating
   signed SBOM attestations for software provenance.
 version: 0.1.0
-maintainer: asrour
+maintainer: SirAppSec
 category: secsdlc
 tags: [sbom, syft, supply-chain, dependencies, cyclonedx, spdx, vulnerability-management, license-compliance]
 frameworks: [NIST, OWASP]
