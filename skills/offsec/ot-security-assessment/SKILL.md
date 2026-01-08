@@ -52,7 +52,7 @@ nmap -sT -p 502,102,2404,20000,47808,2222 <target-ip>
 nmap -p 502 --script modbus-read-registers,modbus-read-coils <target-ip>
 
 # Comprehensive OT scan with service detection (no root required)
-# Note: dnp3-info script must be downloaded (see DNP3 section below)
+# Note: dnp3-info script is included in assets/ directory (see DNP3 section for installation)
 nmap -sV -p 502,102,2404,20000,47808,2222 --script modbus-read-registers,s7-info,dnp3-info,bacnet-info <target-ip>
 ```
 
@@ -194,11 +194,11 @@ nmap -p 2404 -sV <target-ip> -oA iec104_scan
 nmap -p 20000 --script dnp3-info <target-ip> -oA dnp3_info
 ```
 
-**Note**: The `dnp3-info` NSE script is not included in standard Nmap installations. Download and install it:
+**Note**: The `dnp3-info` NSE script is not included in standard Nmap installations. The script is included in this skill's `assets/` directory. Copy and install it:
 
 ```bash
-# Download dnp3-info.nse script
-wget https://raw.githubusercontent.com/automayt/ICS-pcap/refs/heads/master/DNP3/dnp3-info.nse -O /usr/local/share/nmap/scripts/dnp3-info.nse
+# Copy dnp3-info.nse script from skill assets to Nmap scripts directory
+cp skills/offsec/ot-security-assessment/assets/dnp3-info.nse /usr/local/share/nmap/scripts/dnp3-info.nse
 
 # Update Nmap script database
 nmap --script-updatedb
@@ -224,7 +224,7 @@ nmap -sV -p 502,102,2404,20000,47808,2222 <target-ip>
 # OT-specific service enumeration (no root required for TCP scans)
 nmap -p 502 --script modbus-read-registers,modbus-read-coils <target-ip>
 nmap -p 102 --script s7-info <target-ip>
-# Note: dnp3-info script must be downloaded separately (see DNP3 section)
+# Note: dnp3-info script is included in assets/ directory (see DNP3 section for installation)
 nmap -p 20000 --script dnp3-info <target-ip>
 # UDP scan requires root
 sudo nmap -sU -p 47808 --script bacnet-info <target-ip>
@@ -381,7 +381,8 @@ EOF
 
 ## Bundled Resources
 
-This skill does not currently include bundled scripts, references, or assets. All workflows are executed using standard command-line tools (Nmap, Metasploit Framework, Python libraries).
+### Assets (`assets/`)
+- `dnp3-info.nse` - Nmap NSE script for DNP3 protocol enumeration. Copy to `/usr/local/share/nmap/scripts/` and run `nmap --script-updatedb` to use.
 
 **Future enhancements could include**:
 - Scripts for automated OT protocol enumeration
@@ -459,9 +460,12 @@ msf6 > search scada
 
 ### Issue: dnp3-info script not found
 
-**Solution**: The `dnp3-info` NSE script is not included in standard Nmap installations. Download and install it:
+**Solution**: The `dnp3-info` NSE script is not included in standard Nmap installations. The script is included in this skill's `assets/` directory. Copy and install it:
 ```bash
-wget https://raw.githubusercontent.com/automayt/ICS-pcap/refs/heads/master/DNP3/dnp3-info.nse -O /usr/local/share/nmap/scripts/dnp3-info.nse
+# Copy dnp3-info.nse script from skill assets to Nmap scripts directory
+cp skills/offsec/ot-security-assessment/assets/dnp3-info.nse /usr/local/share/nmap/scripts/dnp3-info.nse
+# Or if using from repository root:
+# cp assets/dnp3-info.nse /usr/local/share/nmap/scripts/dnp3-info.nse
 nmap --script-updatedb
 ```
 
@@ -498,3 +502,4 @@ msf6 > search siemens
 - [CISA ICS-CERT Advisories](https://www.cisa.gov/news-events/cybersecurity-advisories) - Industrial control system security advisories
 - [MITRE ATT&CK for ICS](https://attack.mitre.org/techniques/T1046/) - Network service scanning techniques
 - [IEC 62443 Standards](https://en.wikipedia.org/wiki/IEC_62443) - Industrial automation and control systems security standards
+
