@@ -87,6 +87,7 @@
         "./offsec/pentest-metasploit",
         "./offsec/recon-nmap",
         "./offsec/network-netcat",
+        "./offsec/ot-security-assessment",
         "./offsec/analysis-tshark",
         "./offsec/webapp-sqlmap",
         "./offsec/webapp-nikto",

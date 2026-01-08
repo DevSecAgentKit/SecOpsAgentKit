@@ -63,6 +63,7 @@ SecOpsAgentKit provides specialized Claude Code skills for security operations, 
 - **[pentest-metasploit](skills/offsec/pentest-metasploit/SKILL.md)** - Penetration testing framework using [Metasploit](https://docs.metasploit.com/) for exploit development and vulnerability validation
 - **[recon-nmap](skills/offsec/recon-nmap/SKILL.md)** - Network reconnaissance and security auditing using [Nmap](https://nmap.org/book/) for port scanning and service detection
 - **[network-netcat](skills/offsec/network-netcat/SKILL.md)** - Network utility using [Netcat](https://nmap.org/ncat/guide/index.html) for reading/writing data across TCP/UDP connections and port scanning
+- **[ot-security-assessment](skills/offsec/ot-security-assessment/SKILL.md)** - Operational Technology security assessment using [Nmap](https://nmap.org/book/) and [Metasploit](https://www.rapid7.com/db/modules/) for OT/ICS device discovery and vulnerability assessment
 - **[analysis-tshark](skills/offsec/analysis-tshark/SKILL.md)** - Network protocol analyzer and packet capture tool using [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) for traffic analysis
 - **[webapp-sqlmap](skills/offsec/webapp-sqlmap/SKILL.md)** - Automated SQL injection detection and exploitation using [SQLMap](https://sqlmap.org/) for web application security testing
 - **[webapp-nikto](skills/offsec/webapp-nikto/SKILL.md)** - Web server vulnerability scanner using [Nikto](https://cirt.net/Nikto2) for identifying security issues and misconfigurations
