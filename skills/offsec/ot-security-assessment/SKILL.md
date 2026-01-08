@@ -494,7 +494,7 @@ msf6 > search siemens
 ## References
 
 - [Nmap Documentation](https://nmap.org/book/) - Comprehensive Nmap scanning guide
-- [Metasploit Framework Modules](https://www.rapid7.com/db/modules/) - Metasploit module documentation
+- [Metasploit Framework Modules](https://github.com/rapid7/metasploit-framework) - Metasploit module documentation
 - [CISA ICS-CERT Advisories](https://www.cisa.gov/news-events/cybersecurity-advisories) - Industrial control system security advisories
 - [MITRE ATT&CK for ICS](https://attack.mitre.org/techniques/T1046/) - Network service scanning techniques
-- [IEC 62443 Standards](https://www.iec.ch/iec62443) - Industrial automation and control systems security standards
+- [IEC 62443 Standards](https://en.wikipedia.org/wiki/IEC_62443) - Industrial automation and control systems security standards
